@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap");
+
+:root {
+    --background: #F7F7F7;
+    --primary-text: #333333;
+    --secondary-text: #666666;
+    --accent-color-1: #FF6B6B;
+    --accent-color-2: #61C0BF;
+    --button-color: #4CAF50;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+
+    /* colors  */
+    background-color: var(--background);
+    color: var(--primary-text);
+}
+
+
+button {
+    color: var(--button-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* scroll bar  */
+*::-webkit-scrollbar {
+    height: 4px;
+    width: 4px;
+}
+
+*::-webkit-scrollbar-track {
+    border-radius: 11px;
+    background-color: #dfe9eb;
+}
+
+*::-webkit-scrollbar-track:hover {
+    background-color: #b8c0c2;
+}
+
+*::-webkit-scrollbar-track:active {
+    background-color: #b8c0c2;
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #35b540;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #b2ece7;
+}
+
+*::-webkit-scrollbar-thumb:active {
+    background-color: #b2ece7;
+}
+
+/* utility classes  */
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+/* container */
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* header */
+.header {
+    height: 7vh;
+    grid-area: 1 / 1 / 2 / 6;
+    padding-left: 16px;
+    padding-block: 8px;
+}
+
+.sidebar {
+    grid-area: 2 / 1 / 6 / 2;
+    flex-direction: column;
+    height: 93vh;
+    width: 20vw;
+    display: flex;
+}
+
+.options {
+    grid-area: 2 / 1 / 3 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 8px;
+    height: 30%;
+    gap: 8px;
+}
+
+.option {
+    padding: 8px;
+    width: 250px;
+    height: 35px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+.count {
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    height: 22px;
+    background-color: #969292;
+    padding: 8px;
+}
+
+.projects {
+    grid-area: 3 / 1 / 5 / 2;
+    height: 70%;
+    width: 250px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid green;
+}
+
+.project-list {
+    display: grid;
+    overflow-y: auto;
+    gap: 8px;
+}
+
+.project {
+    padding: 8px;
+    font-weight: 700;
+    border: 1px solid black;
+}
+
+.new-project-btn {
+    background-color: #e1ecf4;
+    border-radius: 3px;
+    border: 1px solid #7aa7c7;
+    box-shadow: rgba(255, 255, 255, 0.7) 0 1px 0 0 inset;
+    box-sizing: border-box;
+    color: #39739d;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, system-ui, "Segoe UI", "Liberation Sans",
+        sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.15385;
+    margin: 0;
+    outline: none;
+    padding: 8px 0.8em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    white-space: nowrap;
+}
+
+.new-project-btn:hover,
+.new-project-btn:focus {
+    background-color: #b3d3ea;
+    color: #2c5777;
+}
+
+.new-project-btn:focus {
+    box-shadow: 0 0 0 4px rgba(0, 149, 255, 0.15);
+}
+
+.new-project-btn:active {
+    background-color: #a0c7e4;
+    box-shadow: none;
+    color: #2c5777;
+}
+
+.form-container {
+    border: 1px solid black;
+    padding: 32px;
+    height: 200px;
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    border-radius: 8px;
+    position: relative;
+}
+
+.projectNameInput {
+    padding: 4px;
+    border: 1px solid black;
+    font-size: 24px;
+    margin-top: 8px;
+}
+
+.close-form {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    cursor: pointer;
+}
+
+.close-form:hover {
+    font-weight: bold;
+}
+
+.projectForm {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.projectFormVisible {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+/* workspace  */
+.workspace {
+    grid-area: 2 / 2 / 5 / 5;
+    height: calc(100vh-7vh);
+    width: 80vw;
+    background-color: green;
+}
