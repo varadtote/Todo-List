@@ -8,24 +8,51 @@
   <body>
     <!-- <div id="app"></div> -->
     <div class="container">
-      <div class="header"></div>
+      <div class="header">Todo List</div>
       <div class="sidebar flex">
         <div class="options">
-          <ul>
-            <li>Tasks</li>
-            <li>Today</li>
-            <li>To Do List</li>
-            <li>Kanban</li>
-          </ul>
+          <!-- To Do  -->
+          <div class="option" id="toDocard">
+            <div class="ToDo"> To Do </div>
+            <div class="count" id="ToDoCount"> 1 </div>
+          </div>
+          <!-- Today  -->
+          <div class="option" id="todayCard">
+            <div class="Today"> Today </div>
+            <div class="count" id="todayCount"> 5 </div>
+          </div>
+          <!-- Kanabn  -->
+          <div class="option" id="kanbanCard">
+            <div class="Kanban"> Kanban </div>
+            <div class="count" id="kanbanCount"> 7 </div>
+          </div>
+          <!-- Projects  -->
+          <div class="option" id="projectCard">
+            <div class="Project"> Project </div>
+            <div class="count" id="projectCount"> 5 </div>
+          </div>
         </div>
-
         <div class="projects">
-          project1
+          <div class="project-list">
+            <div class="project">Exercise </div>
+          </div>
+          <button class="new-project-btn">New Project </button>
         </div>
       </div>
-      <div class="workspace"></div>
-    </div>
-    <script src="index.js"></script>
-    <!-- <script src="bundle.js"></script> -->
+      <div class="workspace">
+        <form action="" id="projectForm">
+          <div class="form-container">
+            <div class="form-title">
+              <label for="">Name of Project</label>
+              <input type="text" placeholder="Exercise" id="projectName" class="projectNameInput">
+            </div>
+            <div class="project-add-btn ">
+              <button class="new-project-btn" submit">Add Project</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <script src="index.js"></script>
+      <!-- <script src="bundle.js"></script> -->
   </body>
 </html>
