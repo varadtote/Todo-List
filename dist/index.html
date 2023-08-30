@@ -8,7 +8,9 @@
   <body>
     <!-- <div id="app"></div> -->
     <div class="container">
-      <div class="header">Todo List</div>
+      <div class="header">
+        <h1>Todo List</h1>
+      </div>
       <div class="sidebar flex">
         <div class="options">
           <!-- To Do  -->
@@ -40,17 +42,24 @@
         </div>
       </div>
       <div class="workspace">
-        <form action="" id="projectForm">
-          <div class="form-container">
-            <div class="form-title">
-              <label for="">Name of Project</label>
-              <input type="text" placeholder="Exercise" id="projectName" class="projectNameInput">
+
+        <!-- Project Name Input Form  -->
+        <div class="projectForm">
+          <form action="" id="projectForm">
+            <div class="form-container">
+              <div class="close-form">X</div>
+              <div class="form-title">
+                <label for="projectName"><h3>Name of Project</h3></label>
+                <input type="text" placeholder="eg. Exercise" id="projectName" class="projectNameInput">
+              </div>
+              <div class="project-add-btn ">
+                <button class="formProjectBtn" onclick="addProject(event)">Add Project</button>
+              </div>
             </div>
-            <div class="project-add-btn ">
-              <button class="new-project-btn" submit">Add Project</button>
-            </div>
-          </div>
-        </form>
+          </form>
+        </div>
+       
+
       </div>
       <script src="index.js"></script>
       <!-- <script src="bundle.js"></script> -->
